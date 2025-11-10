@@ -79,11 +79,17 @@
         <section id="audio-overview" class="my-8">
             <div class="card">
                 <h2 class="text-2xl font-bold text-white mb-4">Audio Overview</h2>
-                <p class="text-lg text-gray-300 mb-6">Listen to a summary of this critical analysis.</p>
-                <audio controls class="w-full">
-                    <source src="/api/proxy?mediaId=8fc65442-ea8a-4e2e-b83c-48a727296ece" type="audio/mpeg">
+                <p class="text-lg text-gray-300 mb-6">Listen to a summary of this critical analysis. If the player does not load, please use the download link.</p>
+                
+                <audio controls class="w-full mb-4">
+                    <source src="https://raw.githubusercontent.com/shauser111/critical-thinking/main/audio/analysis01.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+
+                <a href="https://raw.githubusercontent.com/shauser111/critical-thinking/main/audio/analysis01.mp3" download="audio_overview.mp3" class="inline-flex items-center text-sm text-[#ce9e62] hover:text-yellow-500 transition-colors">
+                    <span class="material-icons mr-1" style="font-size: 1.25rem;">download</span>
+                    Download MP3 (Fallback Link)
+                </a>
             </div>
         </section>
 
