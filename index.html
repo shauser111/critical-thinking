@@ -79,20 +79,14 @@
         <section id="audio-overview" class="my-8">
             <div class="card">
                 <h2 class="text-2xl font-bold text-white mb-4">Audio Overview</h2>
-                <p class="text-lg text-gray-300 mb-6">Listen to a summary of this critical analysis. <!-- If the player does not load, please use the download link. --></p>
+                <p class="text-lg text-gray-300 mb-6">Listen to a summary of this critical analysis. </p>
                 
                 <audio controls class="w-full mb-4">
                     <source src="https://raw.githubusercontent.com/shauser111/critical-thinking/main/audio/analysis01.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
 
-                <!--
-                <a href="https://raw.githubusercontent.com/shauser111/critical-thinking/main/audio/analysis01.mp3" download="audio_overview.mp3" class="inline-flex items-center text-sm text-[#ce9e62] hover:text-yellow-500 transition-colors">
-                    <span class="material-icons mr-1" style="font-size: 1.25rem;">download</span>
-                    Download MP3 (Fallback Link)
-                </a>
-                -->
-            </div>
+                </div>
         </section>
 
         <section id="hype" class="my-8">
@@ -139,7 +133,7 @@
                         <p class="text-red-400 mt-2">Logically Nonsensical</p>
                     </div>
                     <div class="text-center p-6 bg-[#2c2c2c] rounded-lg shadow-inner m-2">
-                        <h4 class="text-lg font-semibold text-yellow-400">The Likely Reality</h4>
+                        <h4 class="text-lg font-semibold text-yellow-400">One Possible Reality</h4>
                         <p class="text-2xl font-mono font-bold text-[#ce9e62] my-2">`Firm Size 1B - 3B`</p>
                         <span class="material-icons text-5xl text-[#ce9e62]" title="Correct">check_circle_outline</span>
                         <p class="text-yellow-400 mt-2">Logically Coherent</p>
@@ -165,15 +159,15 @@
                     <div class="flex flex-col md:flex-row justify-around w-full mt-4">
                         <div class="flow-step mx-2 border-t-4 border-[#ce9e62]">
                             <h4 class="text-lg font-bold text-[#ce9e62]">Market 1: Healthcare</h4>
-                            <p class="text-gray-600">Keywords: <span class="font-semibold">HIPAA</span>, <span class="font-semibold">PHI</span>, "Clinicians", "Patient Records"</p>
+                            <p class="text-gray-200">Keywords: <span class="font-semibold">HIPAA</span>, <span class="font-semibold">PHI</span>, "Clinicians", "Patient Records"</p>
                         </div>
                         <div class="flow-step mx-2 border-t-4 border-[#ce9e62]">
                             <h4 class="text-lg font-bold text-[#ce9e62]">Market 2: Higher Ed</h4>
-                            <p class="text-gray-600">Keywords: <span class="font-semibold">FERPA</span>, <span class="font-semibold">GLBA</span>, "Faculty", "Student Records"</p>
+                            <p class="text-gray-200">Keywords: <span class="font-semibold">FERPA</span>, <span class="font-semibold">GLBA</span>, "Faculty", "Student Records"</p>
                         </div>
                         <div class="flow-step mx-2 border-t-4 border-[#c1432e]">
                             <h4 class="text-lg font-bold text-[#c1432e]">Market 3: The CISO</h4>
-                            <p class="text-gray-600">Keywords: <span class="font-semibold">Methodology</span>, "Zero Trust", "Audit Logs", "DLP"</p>
+                            <p class="text-gray-200">Keywords: <span class="font-semibold">Methodology</span>, "Zero Trust", "Audit Logs", "DLP"</p>
                         </div>
                     </div>
                 </div>
@@ -183,7 +177,7 @@
         <section id="analog-hole" class="my-16">
             <h2 class="text-3xl font-bold text-[#ce9e62] mb-4">Part 4: Interrogating the "Analog Hole"</h2>
             <p class="text-lg text-gray-300 mb-6">
-                The entire "digital fortress" model is built on a flawed assumption: that the threat is also digital. It completely ignores the "analog hole"—a physical-layer vulnerability (a camera) that no software can patch. All digital DLP controls are rendered trivial to bypass.
+                The entire "digital fortress" model is built on a flawed assumption: that the threat is also digital. It completely ignores the "analog hole"—a physical-layer vulnerability <i> a camera or modified smartglasses </i> that no software can patch. All digital DLP controls are rendered trivial to bypass.
             </p>
 
             <div class="card mb-12">
@@ -229,10 +223,16 @@
             </p>
             <div class="card">
                 <h3 class="text-2xl font-bold text-center mb-4 text-white">Data Theft vs. Anomaly Detection</h3>
-                <p class="text-center text-gray-300 mb-8">
-                    The "Loud Thief" (orange) spikes above the "Anomaly Threshold" (red) and is caught. The "Patient Spy" (blue) steals the same amount of data over 30 days, but their activity is *indistinguishable* from a normal workflow and *never* triggers the alarm.
-                </p>
-                <div class="chart-container" style="max-height: 450px;">
+              
+<p class="text-center text-gray-300 mb-8">
+    The "Loud Thief" (orange) spikes above the "Anomaly Threshold" (red) and is caught. The "Patient Spy" (blue) steals the same amount of data over 30 days, but their activity is <em>indistinguishable</em> from a normal workflow and <em>never</em> triggers the alarm.
+</p>
+<div class="chart-container" style="max-height: 450px;">
+
+
+
+
+
                     <canvas id="spyVsThiefChart"></canvas>
                 </div>
             </div>
@@ -241,7 +241,7 @@
         <section id="reality" class="my-16">
             <h2 class="text-3xl font-bold text-[#ce9e62] mb-4">Conclusion: The Sobering Reality</h2>
             <p class="text-lg text-gray-300 mb-6">
-                The "Enterprise Browser" is not a "perfect solution." It is a powerful tool for stopping *digital* theft and for *attributing* blame for *public* leaks. It is, however, completely blind to the patient, human-layer threat. Critical skepticism reveals the true, non-technical solution.
+                The "Enterprise Browser" is not a "perfect solution." It is a powerful tool for stopping <b>digital</b> theft and for attributing blame for public leaks. It is, however, completely blind to the patient, human-layer threat. Critical skepticism reveals the true, non-technical solution.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="card border-l-8 border-[#ce9e62]">
@@ -252,7 +252,7 @@
                 <div class="card border-l-8 border-[#c1432e]">
                     <h3 class="text-3xl font-black text-[#c1432e] mb-4">THE REALITY</h3>
                     <span class="material-icons text-6xl" title="Lock">lock</span>
-                    <p class="text-2xl font-semibold text-white mt-4">A low-tech, physical, and procedural control: **A security guard and a locker for employee cell phones.**</p>
+                    <p class="text-2xl font-semibold text-white mt-4">A low-tech, physical, and procedural control: A security guard and a locker for employee cell phones.</p>
                 </div>
             </div>
             <p class="text-xl text-center text-gray-300 mt-12 italic">
