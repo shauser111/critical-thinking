@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -65,16 +66,32 @@
             text-rendering: optimizeLegibility;
             font-feature-settings: 'liga';
         }
+        
+        /* --- ADDED THIS FOR AUTO-HIDE --- */
+        header {
+            transition: transform 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="text-gray-200">
 
-    <header class="bg-[#c1432e] text-white p-8 text-center sticky top-0 z-10 shadow-lg">
-        <h1 class="text-3xl md:text-5xl font-black tracking-tight">The Digital Fortress & The Analog Hole</h1>
-        <p class="text-lg md:text-xl text-red-200 mt-2">A Critical Analysis of Enterprise Browser Security Hype</p>
+    <header class="bg-[#c1432e] text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="https://happymachinesandhumans.com/" class="text-2xl font-bold text-white tracking-wider">HAPPY MACHINES + HUMANS</a>
+            
+            <div class="flex items-center space-x-4">
+                 <a href="https://happymachinesandhumans.com/" class="bg-gray-900/50 text-white font-bold py-2 px-4 rounded-lg text-sm hover:bg-gray-900/80">Back to Main</a>
+            </div>
+        </nav>
     </header>
 
     <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <section class="text-center my-12">
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white">The Digital Fortress & The Analog Hole</h1>
+            <p class="text-lg md:text-xl text-red-200 mt-2">A Critical Analysis of Enterprise Browser Security Hype</p>
+        </section>
 
         <section id="audio-overview" class="my-8">
             <div class="card">
@@ -85,8 +102,7 @@
                     <source src="https://raw.githubusercontent.com/shauser111/critical-thinking/main/audio/analysis01.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-
-                </div>
+            </div>
         </section>
 
         <section id="hype" class="my-8">
@@ -133,7 +149,7 @@
                         <p class="text-red-400 mt-2">Logically Nonsensical</p>
                     </div>
                     <div class="text-center p-6 bg-[#2c2c2c] rounded-lg shadow-inner m-2">
-                        <h4 class="text-lg font-semibold text-yellow-400">One Possible Reality</h4>
+                        <h4 class="text-lg font-semibold text-yellow-400">The Likely Reality</h4>
                         <p class="text-2xl font-mono font-bold text-[#ce9e62] my-2">`Firm Size 1B - 3B`</p>
                         <span class="material-icons text-5xl text-[#ce9e62]" title="Correct">check_circle_outline</span>
                         <p class="text-yellow-400 mt-2">Logically Coherent</p>
@@ -177,7 +193,7 @@
         <section id="analog-hole" class="my-16">
             <h2 class="text-3xl font-bold text-[#ce9e62] mb-4">Part 4: Interrogating the "Analog Hole"</h2>
             <p class="text-lg text-gray-300 mb-6">
-                The entire "digital fortress" model is built on a flawed assumption: that the threat is also digital. It completely ignores the "analog hole"—a physical-layer vulnerability <i> a camera or modified smartglasses </i> that no software can patch. All digital DLP controls are rendered trivial to bypass.
+                The entire "digital fortress" model is built on a flawed assumption: that the threat is also digital. It completely ignores the "analog hole"—a physical-layer vulnerability (a camera) that no software can patch. All digital DLP controls are rendered trivial to bypass.
             </p>
 
             <div class="card mb-12">
@@ -225,14 +241,9 @@
                 <h3 class="text-2xl font-bold text-center mb-4 text-white">Data Theft vs. Anomaly Detection</h3>
               
 <p class="text-center text-gray-300 mb-8">
-    The "Loud Thief" (orange) spikes above the "Anomaly Threshold" (red) and is caught. The "Patient Spy" (blue) steals the same amount of data over 30 days, but their activity is <em>indistinguishable</em> from a normal workflow and <em>never</em> triggers the alarm.
+    The "Loud Thief" (orange) spikes above the "Anomaly Threshold" (red) and is caught. The "Patient Spy" (blue) steals the same amount of data over 30 days, but their activity is <em>indistinguishable</em> from a normal workflow and <em></em>never<em> triggers the alarm.
 </p>
 <div class="chart-container" style="max-height: 450px;">
-
-
-
-
-
                     <canvas id="spyVsThiefChart"></canvas>
                 </div>
             </div>
@@ -241,7 +252,7 @@
         <section id="reality" class="my-16">
             <h2 class="text-3xl font-bold text-[#ce9e62] mb-4">Conclusion: The Sobering Reality</h2>
             <p class="text-lg text-gray-300 mb-6">
-                The "Enterprise Browser" is not a "perfect solution." It is a powerful tool for stopping <b>digital</b> theft and for attributing blame for public leaks. It is, however, completely blind to the patient, human-layer threat. Critical skepticism reveals the true, non-technical solution.
+                The "Enterprise Browser" is not a "perfect solution." It is a powerful tool for stopping <b>digital</b> theft and for *attributing* blame for *public* leaks. It is, however, completely blind to the patient, human-layer threat. Critical skepticism reveals the true, non-technical solution.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="card border-l-8 border-[#ce9e62]">
@@ -252,7 +263,7 @@
                 <div class="card border-l-8 border-[#c1432e]">
                     <h3 class="text-3xl font-black text-[#c1432e] mb-4">THE REALITY</h3>
                     <span class="material-icons text-6xl" title="Lock">lock</span>
-                    <p class="text-2xl font-semibold text-white mt-4">A low-tech, physical, and procedural control: A security guard and a locker for employee cell phones.</p>
+                    <p class="text-2xl font-semibold text-white mt-4">A low-tech, physical, and procedural control: **A security guard and a locker for employee cell phones.**</p>
                 </div>
             </div>
             <p class="text-xl text-center text-gray-300 mt-12 italic">
@@ -431,6 +442,25 @@
                 }
             });
         })();
+    </script>
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // We check scrollTop > 100 so it doesn't hide on small jitters at the top
+            if (scrollTop > lastScrollTop && scrollTop > 100) { 
+                // Scrolling Down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling Up
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
     </script>
 
 </body>
